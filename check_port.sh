@@ -1,5 +1,5 @@
 #!/bin/bash
-. print_err.sh
+. ./autotest/print_err.sh
 
 pwd
 
