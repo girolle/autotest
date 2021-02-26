@@ -36,4 +36,3 @@ then
 fi
 killall node
 node run.js
-exit 0
