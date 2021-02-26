@@ -33,6 +33,7 @@ PORT=$(netstat -an | grep ':3000 ')
 if [[ -z $PORT ]]
 then
 	print_err $PORT_ERR
+	exit 0
 fi
 killall node
 node run.js
