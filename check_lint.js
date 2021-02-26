@@ -22,8 +22,10 @@ async function useLint(projectPath) {
 
 async function test() {
     const lint = await useLint('');
-    console.error(lint);
-    process.exit(1);
+    for (const warning of lint) {
+        console.error(`${warning.text} line:${warning.line} column:${warning.column}`);
+    }
+    process.exit(lint.length);
 }
 
 test();
