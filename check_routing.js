@@ -35,7 +35,7 @@ async function test() {
          throw new Error("Routing problem");
      }
     } catch(err) {
-       console.error("\e[31m"+err+"\e[0m")
+       console.error(err)
        process.exit (1)
        // errors.push({ id: 'student_web_project_error.12.signUp' });
        // console.error(errors);
