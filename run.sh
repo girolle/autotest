@@ -27,7 +27,7 @@ then
 	exit 0
 fi
 
-npm ci && npm -s run start &
+npm i && npm -s run start &
 sleep 20
 PORT=$(netstat -an | grep ':3000 ')
 if [[ -z $PORT ]]
