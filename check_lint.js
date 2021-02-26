@@ -14,6 +14,7 @@ async function useLint(projectPath) {
     const errors = [];
     for (let result of data.results) {
         for (let warning of result.warnings) {
+            warning.source = result.source
             errors.push(warning);
         }
     }
@@ -23,7 +24,7 @@ async function useLint(projectPath) {
 async function test() {
     const lint = await useLint('');
     for (const warning of lint) {
-        console.error(`${warning.text} line:${warning.line} column:${warning.column}`);
+        console.error(`${warning.text} source: ${warning.source} line:${warning.line} column:${warning.column}`);
     }
     process.exit(lint.length);
 }
