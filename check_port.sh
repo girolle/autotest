@@ -2,12 +2,10 @@
 . ./autotest/print_err.sh
 . ./autotest/ERRORS_KEYS.sh
 
-pwd
-
-PORT_ERR="NOT 3000 PORT"
 
 npm -s i && npm -s run start &
 sleep 20
+netstat -an
 PORT=$(netstat -an | grep ':3000 ')
 if [[ -z $PORT ]]
 then
