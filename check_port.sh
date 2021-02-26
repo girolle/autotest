@@ -12,4 +12,5 @@ then
 	exit 1
 fi
 
+killall node
 exit 0
