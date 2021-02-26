@@ -2,10 +2,11 @@
 . ./autotest/print_err.sh
 . ./autotest/ERRORS_KEYS.sh
 
-
-npm i && npm run start &
+echo "here1"
+npm run start &
 sleep 20
-netstat -an
+echo "here2"
+
 PORT=$(netstat -an | grep ':3000 ')
 if [[ -z $PORT ]]
 then
