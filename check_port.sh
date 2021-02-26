@@ -3,7 +3,7 @@
 . ./autotest/ERRORS_KEYS.sh
 
 
-npm -s i && npm -s run start &
+npm i && npm run start &
 sleep 20
 netstat -an
 PORT=$(netstat -an | grep ':3000 ')
