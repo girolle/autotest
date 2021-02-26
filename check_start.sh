@@ -1,7 +1,6 @@
 #!/bin/bash
-. /autotest/print_err.sh
-
-START_ERR="NO START SCRIPT"
+. ./autotest/print_err.sh
+. ./autotest/ERRORS_KEYS.sh
 
 START=$(npm run | grep "start" -A1)
 if [[ -z $START ]]
